@@ -27,6 +27,11 @@ namespace ChatBot
         public string Sexo { get; set; }
         public Configuracion()
         {
+            ColorFondo = Properties.Settings.Default.ColorFondo;
+            ColorUsuario = Properties.Settings.Default.ColorUsuario;
+            ColorRobot = Properties.Settings.Default.ColorRobot;
+            Sexo = Properties.Settings.Default.Sexo;
+
             InitializeComponent();
             DataContext = this;
             
@@ -34,14 +39,6 @@ namespace ChatBot
             colorFondo.ItemsSource = typeof(Colors).GetProperties();
             colorUsuario.ItemsSource = typeof(Colors).GetProperties();
             colorRobot.ItemsSource = typeof(Colors).GetProperties();
-
-            //colorFondo.SelectedItem = Properties.Settings.Default.ColorFondo;
-            //colorUsuario.SelectedItem = Properties.Settings.Default.ColorUsuario;
-            //colorRobot.SelectedItem = Properties.Settings.Default.ColorRobot;
-            //colorUsuario.SelectedItem = Properties.Settings.Default.Sexo;
-
-
-
 
         }
 

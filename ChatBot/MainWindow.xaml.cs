@@ -55,6 +55,7 @@ namespace ChatBot
             String conversacion = "";
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Txt Files|*.txt";
+          
             if (saveFileDialog.ShowDialog() == true)
             {
                 
@@ -100,6 +101,7 @@ namespace ChatBot
 
             configuracionWindow.Title = "Configuración de la aplicación";
             configuracionWindow.Owner = this;
+
             if (configuracionWindow.ShowDialog() == true)
 
             {
